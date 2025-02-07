@@ -40,13 +40,15 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
+
+                    {% if 'username' in session %}
+                    <li><span style="color: white;">Hola, {{ session['username'] }}!</span></li>
+                    <li><a href="/logout">Cerrar Sesión</a></li>
+                    {% else %}
                     <div class="cart-icon text-white me-3">
                         <a class="fa-solid fa-user" href="/login"></a>
                     </div>
-                    <div class="cart-icon text-white">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-badge">0</span>
-                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
