@@ -35,9 +35,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contacto</a>
                     </li>
+                    {% if 'username' in session %}
                     <li class="nav-item">
                         <a class="nav-link" href="/agregar_vino">Añadir vino</a>
                     </li>
+                    {% endif %}
                 </ul>
                 <div class="d-flex align-items-center">
 
