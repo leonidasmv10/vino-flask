@@ -19,6 +19,6 @@ def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 10000))  # Render asigna un puerto automáticamente
-    app.run(host='0.0.0.0', port=port)
-    # app.run(debug=True)
+    # port = int(os.environ.get("PORT", 10000))  # Render asigna un puerto automáticamente
+    # app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
