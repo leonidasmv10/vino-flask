@@ -19,7 +19,7 @@ def contact():
     return render_template('contact.html')
 
 @app.route('/success')
-def contact():
+def success():
     return render_template('success.html')
 
 if __name__ == '__main__':
