@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Modificar Vino{% endblock %}
+
+{% block content %}
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">Modificar Vino</h2>
+    <form action="{{ url_for('modificar_vino', vino_id=vino[0]) }}" method="POST">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" value="{{ vino[1] }}"
+                placeholder="{{ vino[1] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="{{ vino[2] }}"
+                required>{{ vino[2] }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="precio">Precio:</label>
+            <input type="number" class="form-control" id="precio" name="precio" value="{{ vino[3] }}"
+                placeholder="{{ vino[3] }}" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select class="form-control" id="categoria" name="categoria" required>
+                <option value="tinto" {% if vino[4]=='tinto' %}selected{% endif %}>Tintos</option>
+                <option value="blanco" {% if vino[4]=='blanco' %}selected{% endif %}>Blancos</option>
+                <option value="rosado" {% if vino[4]=='rosado' %}selected{% endif %}>Rosados</option>
+                <option value="espumoso" {% if vino[4]=='espumoso' %}selected{% endif %}>Espumosos</option>
+                <option value="premium" {% if vino[4]=='premium' %}selected{% endif %}>Premium</option>
+                <option value="ofertas" {% if vino[4]=='ofertas' %}selected{% endif %}>Ofertas</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="imagen">URL de la imagen:</label>
+            <input type="url" class="form-control" id="imagen" name="imagen" value="{{ vino[5] }}"
+                placeholder="{{ vino[5] }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="stock">Stock:</label>
+            <input type="number" class="form-control" id="stock" name="stock" value="{{ vino[6] }}"
+                placeholder="{{ vino[6] }}" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+</section>
+
+{% endblock %}
