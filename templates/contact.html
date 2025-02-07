@@ -4,67 +4,23 @@
 
 {% block content %}
 
-
 <section class="container my-5">
     <h2 class="text-center mb-4">Contacto</h2>
-    <p>En Vinoteca Premium nos dedicamos a la venta de vinos de alta calidad. Contamos con una amplia variedad de vinos
-        tintos, blancos, rosados, espumosos y de alta gama. También ofrecemos una selección de vinos en oferta para que
-        puedas disfrutar de la mejor calidad al mejor precio.</p>
-
-    <p>Si tienes alguna consulta, no dudes en contactarnos a través de nuestro formulario de contacto o visitando
-        nuestra tienda en la calle Principal 123.</p>
-
-    <div class="row g-4">
-        <div class="col-6 col-md-4 col-lg-2">
-            <div class="card category-card">
-                <div class="card-body text-center">
-                    <i class="fas fa-wine-bottle mb-2"></i>
-                    <h5 class="card-title">Tintos</h5>
-                </div>
-            </div>
+    <form action="{{ url_for('contact') }}" method="POST">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
         </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <div class="card category-card">
-                <div class="card-body text-center">
-                    <i class="fas fa-wine-glass-alt mb-2"></i>
-                    <h5 class="card-title">Blancos</h5>
-                </div>
-            </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
         </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <div class="card category-card">
-                <div class="card-body text-center">
-                    <i class="fas fa-glass-cheers mb-2"></i>
-                    <h5 class="card-title">Rosados</h5>
-                </div>
-            </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
         </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <div class="card category-card">
-                <div class="card-body text-center">
-                    <i class="fas fa-glass-martini mb-2"></i>
-                    <h5 class="card-title">Espumosos</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <div class="card category-card">
-                <div class="card-body text-center">
-                    <i class="fas fa-star mb-2"></i>
-                    <h5 class="card-title">Premium</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <div class="card category-card">
-                <div class="card-body text-center">
-                    <i class="fas fa-percentage mb-2"></i>
-                    <h5 class="card-title">Ofertas</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
 </section>
 
 {% endblock %}
