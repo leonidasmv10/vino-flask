@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<!-- Carrusel -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/static/images/vino.webp" class="d-block w-100" alt="Vinos Premium">
+            <div class="carousel-caption">
+                <h2>Vinos Premium</h2>
+                <p>Descubre nuestra selección especial</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/images/vino.webp" class="d-block w-100" alt="Ofertas">
+            <div class="carousel-caption">
+                <h2>Ofertas Especiales</h2>
+                <p>Hasta 30% de descuento</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/images/vino.webp" class="d-block w-100" alt="Nuevas Llegadas">
+            <div class="carousel-caption">
+                <h2>Nuevas Llegadas</h2>
+                <p>Colección 2024</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Categorías -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Categorías</h2>
+    <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card category-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-wine-bottle mb-2"></i>
+                    <h5 class="card-title">Tintos</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card category-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-wine-glass-alt mb-2"></i>
+                    <h5 class="card-title">Blancos</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card category-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-glass-cheers mb-2"></i>
+                    <h5 class="card-title">Rosados</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card category-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-glass-martini mb-2"></i>
+                    <h5 class="card-title">Espumosos</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card category-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-star mb-2"></i>
+                    <h5 class="card-title">Premium</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+            <div class="card category-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-percentage mb-2"></i>
+                    <h5 class="card-title">Ofertas</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Productos -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Nuestros Vinos</h2>
+    <div class="row g-4">
+        <!-- Producto 1 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card product-card h-100">
+                <img src="/static/images/vino.webp" class="card-img-top product-image" alt="Vino 1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Malbec Reserva 2020</h5>
+                    <p class="card-text">Vino tinto con notas de frutos rojos</p>
+                    <div class="wine-price mt-auto mb-2">$45.99</div>
+                    <button class="btn btn-wine">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card product-card h-100">
+                <img src="/static/images/vino.webp" class="card-img-top product-image" alt="Vino 2">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Chardonnay Premium</h5>
+                    <p class="card-text">Vino blanco con notas cítricas</p>
+                    <div class="wine-price mt-auto mb-2">$38.99</div>
+                    <button class="btn btn-wine">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card product-card h-100">
+                <img src="/static/images/vino.webp" class="card-img-top product-image" alt="Vino 3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cabernet Sauvignon</h5>
+                    <p class="card-text">Vino tinto de gran cuerpo</p>
+                    <div class="wine-price mt-auto mb-2">$52.99</div>
+                    <button class="btn btn-wine">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card product-card h-100">
+                <img src="/static/images/vino.webp" class="card-img-top product-image" alt="Vino 4">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Prosecco Extra Dry</h5>
+                    <p class="card-text">Vino espumoso italiano</p>
+                    <div class="wine-price mt-auto mb-2">$29.99</div>
+                    <button class="btn btn-wine">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
